@@ -1,7 +1,7 @@
 # main.py
 import argparse
 import os
-from thumbnail_generation import generate_face_thumbnail
+from .thumbnail_generation import generate_face_thumbnail
 
 def main():
     parser = argparse.ArgumentParser(description="Generate a thumbnail of the detected face in an image.")

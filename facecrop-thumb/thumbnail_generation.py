@@ -1,8 +1,8 @@
 # thumbnail_generation.py
 import cv2
 import os
-from face_detection import detect_face
-from image_processing import crop_face_thumbnail
+from .face_detection import detect_face
+from .image_processing import crop_face_thumbnail
 
 def generate_face_thumbnail(input_image_path, output_thumbnail_path, margin=50, detect_face_flag=True):
     image = cv2.imread(input_image_path)
