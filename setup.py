@@ -4,7 +4,7 @@ setup(
     name='facecrop-thumb',
     version='1.0.4',
     description='Generate thumbnails of detected faces in images using Python.',
-    long_description='FaceCropThumb is a Python package for generating thumbnails of detected faces in images. It utilizes the MTCNN (Multi-Task Cascaded Convolutional Neural Network) for accurate face detection and OpenCV for image processing.',
+    long_description=open('README.md', encoding='utf-8').read(),
     url='https://github.com/mr-vaibh/facecrop-thumb',
     author='Vaibhav Shukla',
     author_email='shuklavaibhav336@example.com',
