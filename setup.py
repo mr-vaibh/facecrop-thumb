@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='facecrop-thumb',
-    version='1.0.0',
+    version='1.0.4',
     description='Generate thumbnails of detected faces in images using Python.',
     long_description='FaceCropThumb is a Python package for generating thumbnails of detected faces in images. It utilizes the MTCNN (Multi-Task Cascaded Convolutional Neural Network) for accurate face detection and OpenCV for image processing.',
     url='https://github.com/mr-vaibh/facecrop-thumb',
@@ -30,7 +30,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'facecrop-thumb=facecropthumb.main:main',
+            'facecrop-thumb=facecrop_thumb.main:main',
         ],
     },
 )
