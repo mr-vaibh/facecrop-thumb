@@ -1,49 +1,58 @@
+# Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+# -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
 import os
 import sys
 
-# Add the project directory to the Python path
-sys.path.insert(0, os.path.abspath('../..'))
-
-# -- Project information -----------------------------------------------------
+sys.path.insert(0, os.path.abspath('..'))
 
 project = 'facecrop-thumb'
+copyright = '2024, Vaibhav Shukla'
 author = 'Vaibhav Shukla'
 
 # -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.autodoc',      # Generate documentation from docstrings
-    'sphinx.ext.viewcode',     # Add links to source code
-    'sphinx.ext.napoleon',     # Support for Google and NumPy style docstrings
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.viewcode',  # This is optional but useful for linking to source code
+    'sphinx.ext.napoleon',
+    'sphinx.ext.doctest',
 ]
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'LICENSE']
 
 # -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'  # Choose a theme (e.g., 'sphinx_rtd_theme' for Read the Docs)
-
+html_theme = 'alabaster'
 html_static_path = ['_static']
 
-# -- Extension configuration -------------------------------------------------
-
-# Add any additional configurations for extensions here
-
-# -- Autodoc configuration ---------------------------------------------------
-
-autodoc_member_order = 'bysource'  # Order members by source order
-autodoc_default_options = {
-    'members': True,              # Document class members
-    'undoc-members': True,        # Document members with no docstring
-    'show-inheritance': True,     # Show inheritance diagrams
+# This is required for the alabaster theme
+# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'searchbox.html',
+        'donate.html',
+    ],
 }
 
-# -- Napoleon extension configuration ----------------------------------------
-
-napoleon_google_docstring = False  # Set to True if using Google style docstrings
-napoleon_numpy_docstring = True     # Set to True if using NumPy style docstrings
-
-# -- Other configurations ----------------------------------------------------
-
-# Add any other custom configurations here
+html_theme_options = {
+    "description": "Generate thumbnails of detected faces in images using Python.",
+    "github_user": "mr-vaibh",
+    "github_repo": "facecrop-thumb",
+    # "github_banner": True,
+    # "fixed_sidebar": True,
+    "donate_url": True
+}
