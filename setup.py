@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
+from facecrop_thumb.version import __version__
 
 setup(
     name='facecrop-thumb',
-    version='1.0.4',
+    version=__version__,
     description='Generate thumbnails of detected faces in images using Python.',
     long_description=open('README.md', encoding='utf-8').read(),
     url='https://github.com/mr-vaibh/facecrop-thumb',
