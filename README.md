@@ -2,6 +2,8 @@
 
 FaceCropThumb is a Python package for generating thumbnails of detected faces in images. It utilizes the MTCNN (Multi-Task Cascaded Convolutional Neural Network) for accurate face detection and OpenCV for image processing.
 
+All documentation is in the “docs” directory and online at https://facecrop-thumb.readthedocs.io/en/stable/. If you’re just getting started, here’s how we recommend you read the docs:
+
 ## Features
 
 - Detect faces in images using the MTCNN model
@@ -10,13 +12,13 @@ FaceCropThumb is a Python package for generating thumbnails of detected faces in
 - Option to resize the entire image if no face is detected or face detection is skipped
 - Command-line utility for easy usage
 
-## Installation
+## Quick Installation
 
 You can install FaceCropThumb via pip:
 
 ```pip install facecropthumb```
 
-## Usage
+## Quick Usage
 
 ```facecropthumb <image_path> [-d/--dir <output_directory>] [-m/--margin <margin_size>] [-F/--no-face] [-S/--skip-face]```
 
