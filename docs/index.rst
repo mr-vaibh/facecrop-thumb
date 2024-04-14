@@ -48,7 +48,7 @@ You can install FaceCropThumb via pip:
 Quick Usage
 -----------
 
-``facecropthumb <image_path> [-d/--dir <output_directory>] [-m/--margin <margin_size>] [-F/--no-face] [-S/--skip-face]``
+``facecropthumb <image_path> [-d/--dir <output_directory>] [-m/--margin <margin_size>] [-F/--no-face] [-S/--skip-face] [-a/--all]``
 
 -  ``<image_path>``: Path to the input image file.
 -  ``-d/--dir <output_directory>``: Directory to store the output
@@ -58,6 +58,7 @@ Quick Usage
 -  ``-F/--no-face``: Skip face detection and resize the whole image if
    no face is detected.
 -  ``-S/--skip-face``: Skip face detection and resize the whole image.
+-  ``-a/--all``: Process all images in the specified directory. If no directory is provided, it processes images in the current directory.
 -  ``-v/--version``: Show installed version.
 -  ``-h/--help``: Show help.
 

@@ -43,6 +43,12 @@ You can customize the behavior of FaceCropThumb using various options:
 
       facecrop-thumb input_image.jpg -F
 
+- **Processing All Images**: Use the ``-a`` or ``--all`` option to process all images in a specified directory. For example:
+
+  .. code-block:: bash
+
+      facecrop-thumb -a input_directory -d output_directory
+
 - **Version**: You can check the version of FaceCropThumb using the ``-v`` or ``--version`` option. For example:
 
   .. code-block:: bash
